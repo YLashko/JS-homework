@@ -1,0 +1,38 @@
+.json-table-cell:hover, .agg-table-cell:hover {
+    background-color: coral;
+}
+
+.json-table-cell {
+    padding: 5px;
+}
+
+.json-table-input {
+    width: fit-content;
+}
+
+.json-table-row:nth-child(2n), .agg-table-row:nth-child(2n) {
+    background-color: rgb(201, 255, 146);
+}
+
+.json-table-row-calc {
+    background-color: rgb(201, 255, 146);
+}
+
+.json-table-row:nth-child(2n+1), .agg-table-row:nth-child(2n+1) {
+    background-color:rgb(234, 255, 234);
+}
+
+.json-table-head-row, .agg-table-head-row {
+    background-color: rgb(174, 255, 94);
+}
+
+#table-container, #agg-table-container {
+    width: 100%;
+    text-align: center;
+}
+
+#json-table, #agg-table {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}

@@ -1,0 +1,32 @@
+.letter {
+    text-align: center;
+    vertical-align: top;
+    font-size: 24px;
+}
+
+.number {
+    text-align: right;
+    vertical-align: middle;
+    font-size: 24px;
+}
+
+.wide {
+    width: 50px;
+    height: 50px;
+}
+
+.black {
+    background-color: black;
+    color: white;
+}
+
+.white {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+
+.image {
+    margin: 0px;
+    padding: 0px;
+}

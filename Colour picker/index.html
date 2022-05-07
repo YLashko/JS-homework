@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Colour picker</title>
+    </head>
+
+    <body style="margin: 0px;">
+        
+        <table>
+            <tr>
+                <td id="palette" class="zero-mp">
+                    <canvas id="palette-canvas" onmousemove = "setCoordinates(event)" onmousedown="setMouseDown(true)" onmouseup="setMouseDown(false)"></canvas>
+                </td>
+                <td id="col-preview" class="zero-mp">
+                    
+                </td>
+            </tr>
+        </table>
+        <div class="slidecontainer">
+            <input type="range" min="0" max="1535" value="0" class="slider" oninput="setColour(this.value)">
+        </div>
+        <table>
+            <tr>
+                <td style="width: 300px;">
+                    <span style="text-align: center; width: max-content;">
+                        <h3>RGB:</h3>
+                        <div class="slidecontainer-rgb">
+                            <input type="range" min="0" max="255" value="0" class="slider-rgb" id="slider-rgb-r" oninput="updateColoursRGB(this.value, 0)">
+                            <input type="number" id="input-rgb-r" class="input-colour" oninput="updateColoursRGB(this.value, 0)">
+                        </div>
+                        <div class="slidecontainer-rgb">
+                            <input type="range" min="0" max="255" value="0" class="slider-rgb" id="slider-rgb-g" oninput="updateColoursRGB(this.value, 1)">
+                            <input type="number" id="input-rgb-g" class="input-colour" oninput="updateColoursRGB(this.value, 1)">
+                        </div>
+                        <div class="slidecontainer-rgb">
+                            <input type="range" min="0" max="255" value="0" class="slider-rgb" id="slider-rgb-b" oninput="updateColoursRGB(this.value, 2)">
+                            <input type="number" id="input-rgb-b" class="input-colour" oninput="updateColoursRGB(this.value, 2)">
+                        </div>
+                    </span>
+                </td>
+                <td style="width: 300px;">
+                    <span style="text-align: center; width: max-content;">
+                        <h3>CMY:</h3>
+                        <div class="slidecontainer-rgb">
+                            <input type="range" min="0" max="255" value="0" class="slider-cmy" id="slider-cmy-c" oninput="updateColoursCMY(this.value / 255, 0)">
+                            <input type="number" id="input-cmy-c" class="input-colour" oninput="updateColoursCMY(this.value, 0)">
+                        </div>
+                        <div class="slidecontainer-rgb">
+                            <input type="range" min="0" max="255" value="0" class="slider-cmy" id="slider-cmy-m" oninput="updateColoursCMY(this.value / 255, 1)">
+                            <input type="number" id="input-cmy-m" class="input-colour" oninput="updateColoursCMY(this.value, 1)">
+                        </div>
+                        <div class="slidecontainer-rgb">
+                            <input type="range" min="0" max="255" value="0" class="slider-cmy" id="slider-cmy-y" oninput="updateColoursCMY(this.value / 255, 2)">
+                            <input type="number" id="input-cmy-y" class="input-colour" oninput="updateColoursCMY(this.value, 2)">
+                        </div>
+                    </span>
+                </td>
+                <td style="width: 300px;">
+                    <span style="text-align: center; width: max-content;">
+                        <h3>HSV:</h3>
+                        <div class="slidecontainer-rgb">
+                            <input type="range" min="0" max="360" value="0" class="slider-hsv" id="slider-hsv-h" oninput="updateColoursHSV(true)">
+                            <input type="number" id="input-hsv-h" class="input-colour" onchange="updateColoursHSV(false)">
+                        </div>
+                        <div class="slidecontainer-rgb">
+                            <input type="range" min="0" max="100" value="0" class="slider-hsv" id="slider-hsv-s" oninput="updateColoursHSV(true)">
+                            <input type="number" id="input-hsv-s" class="input-colour" onchange="updateColoursHSV(false)">
+                        </div>
+                        <div class="slidecontainer-rgb">
+                            <input type="range" min="0" max="100" value="0" class="slider-hsv" id="slider-hsv-v" oninput="updateColoursHSV(true)">
+                            <input type="number" id="input-hsv-v" class="input-colour" onchange="updateColoursHSV(false)">
+                        </div>
+                    </span>
+                </td>
+            </tr>
+        </table>
+
+        <script src="script.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </body>
+</html>

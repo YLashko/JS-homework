@@ -1,0 +1,31 @@
+<head>
+    <style>
+        #flying {
+            position: fixed; 
+        }
+    </style>
+<!--[if lte IE 6]> 
+    <style>
+        #flying {
+            position: absolute; /* ie6 does not support fixed position */
+        }
+    </style>
+<![endif]--> 
+
+    <script type="text/javascript">
+        function UpdateFlyingObj (event) {
+            var mouseX = Math.round (event.clientX);
+            var mouseY = Math.round (event.clientY);
+
+            var flyingObj = document.getElementById ("flying");
+            flyingObj.style.left = mouseX + "px";
+            flyingObj.style.top = mouseY + "px";
+
+        }
+    </script>
+</head>
+<body onmousemove="UpdateFlyingObj (event);">
+    <div style="height:1000px;">The flying object also works for document scrolling.</div>
+
+    <img id="flying" src="flying.gif" />
+</body>

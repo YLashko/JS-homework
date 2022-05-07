@@ -1,0 +1,47 @@
+#col-preview {
+    width: 256px;
+    height: 256px;
+}
+
+#palette {
+    width: 512px;
+    height: 256px;
+}
+
+.zero-mp {
+    margin: 0px;
+    padding: 0px;
+}   
+
+#palette-canvas {
+    width: 512px;
+    height: 256px;
+}
+
+.slidecontainer {
+    width: 784px;
+}
+
+.slider {
+    width: 784px;
+}
+
+.slider-rgb {
+    width: 300px;
+}
+
+.slider-cmy {
+    width: 300px;
+}
+.slider-hsv {
+    width: 300px;
+}
+
+.slidecontainer-rgb {
+    display: flex;
+    justify-content: center;
+}
+
+.input-colour {
+    width: 50px;
+}
